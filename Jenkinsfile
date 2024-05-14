@@ -34,7 +34,7 @@ pipeline {
  steps {
  script {
  echo 'Deploying Python Flask app...'
- sh 'python -m flask run &'
+ sh 'python app.py &'
  }
  }
  }
