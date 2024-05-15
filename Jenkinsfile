@@ -26,7 +26,7 @@ pipeline {
 
  stage('Approve via email') {
  steps {
- emailext to: 'devopsmay24batch@gmail.com', subject: 'New build is waiting for your approval', body: '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd"><html><p>A new build has been deployed, please view it by visiting <a href=http://localhost:8000/>"http://localhost:8080/"</a>, please approve this deployment by clicking on <a href=http://localhost:8080/job/demopythonapp/${BUILD_NUMBER}/input/>"http://localhost:8080/"</a></p></html>', attachLog: true
+ emailext to: 'devopsmay24batch@gmail.com', subject: 'New build is waiting for your approval', body: '<html><p>A new build has been deployed, please view it by visiting <a href=http://localhost:8000/>"http://localhost:8080/"</a>, please approve this deployment by clicking on <a href=http://localhost:8080/job/demopythonapp/${BUILD_NUMBER}/input/>"http://localhost:8080/"</a></p></html>', attachLog: true
  timeout(time: 60, unit: 'MINUTES') {
  }
  }
